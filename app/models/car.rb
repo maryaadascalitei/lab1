@@ -5,4 +5,10 @@ class Car < ActiveRecord::Base
 	def total_value
 		price*stock
 	end
+
+	def self.most_expensive
+		order(price: :desc).first
+		#echiv car.order()
+	end
+
 end

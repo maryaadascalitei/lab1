@@ -13,7 +13,10 @@
   </thead>
 
   <tbody>
+<<<<<<< HEAD
     <p>Test ffff</p>
+=======
+>>>>>>> 574638f9e58b9e194dc104fd8471a9462ee07801
     <% @cars.each do |car| %>
       <tr>
         <td><%= car.color %></td>

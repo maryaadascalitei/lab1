@@ -1,5 +1,6 @@
 deployment:
   production:
+<<<<<<< HEAD
     branch: master
     commands:
       - git push git@heroku.com:svlabapp1.git $CIRCLE_SHA1:refs/heads/master
@@ -8,3 +9,13 @@ deployment:
     commands:
       - git push git@heroku.com:svlabapp1-staging.git $CIRCLE_SHA1:refs/heads/lab2
       - heroku run rake db:migrate --app svlabapp1-staging
+=======
+    branch: lab2
+    commands:
+      - git push git@heroku.com:svlabapp1.git $CIRCLE_SHA1:refs/heads/lab2
+      - heroku run rake db:migrate --app svlabapp1
+    branch: lab2
+    commands:
+      - git push git@heroku.com:svlabapp1-staging.git $CIRCLE_SHA1:refs/heads/master
+      - heroku run rake db:migrate --app svlabapp1-lab2
+>>>>>>> 574638f9e58b9e194dc104fd8471a9462ee07801

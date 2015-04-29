@@ -5,12 +5,20 @@
 <table>
   <thead>
     <tr>
+<<<<<<< HEAD
       <th>Color</th>
+      <th>Id</th>
       <th>HP</th>
+=======
+      <th>Color2</th>
+      <th>Hp</th>
+>>>>>>> 574638f9e58b9e194dc104fd8471a9462ee07801
       <th>Model</th>
       <th>Stock</th>
       <th>Price</th>
       <th>Total</th>
+      <th>Averate rating</th>
+      <th>Your rating</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,11 +28,14 @@
     <% @cars.each do |car| %>
       <tr>
         <td><%= car.color %></td>
+        <td><%= car.car_id %></td>
         <td><%= car.hp %></td>
         <td><%= car.model %></td>
         <td><%= car.stock %></td>
         <td><%= car.price %></td>
         <td><%= car.total_value %></td>
+        <td><div class="star" data-average-rating="<%= car.average_rating %>"></div></td>
+        <td><div class="user_star" data-average-rating="<%= car.user_rating%>"></div></td>
         <td><%= link_to 'Show', car %></td>
         <td><%= link_to 'Edit', edit_car_path(car) %></td>
         <td><%= link_to 'Destroy', car, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -5,8 +5,10 @@ class CarsController < ApplicationController
   # GET /cars.json
   def index
     @cars = Car.all
-    @most_expensive_car=Car.most_expensive
+    @most_expensive_car=Car.most_expensive.model 
+
   end
+
 
   # GET /cars/1
   # GET /cars/1.json
@@ -15,8 +17,9 @@ class CarsController < ApplicationController
 
   # GET /cars/new
   def new
-    @car = Car.new
+    @car = Car.new(car_params)
   end
+
 
   # GET /cars/1/edit
   def edit
@@ -70,6 +73,6 @@ class CarsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def car_params
-      params.require(:car).permit(:color, :hp, :model, :stock,:price)
+      params.require(:car).permit(:color, :car_id,:hp, :model, :stock,:price)
     end
 end

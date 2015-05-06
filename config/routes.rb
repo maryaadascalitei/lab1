@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  post 'svcontroller/index'
+  devise_for :users
   resources :cars
   resources :ratings, only: :update
   # The priority is based upon order of creation: first created -> highest priority.

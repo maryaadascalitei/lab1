@@ -48,3 +48,6 @@ end
 
 gem 'rails_12factor'
 gem 'pg'
+gem 'devise'
+gem "letter_opener", :group => :development
+gem "resque", "~> 2.0.0.pre.1", github: "resque/resque"

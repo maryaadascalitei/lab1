@@ -5,14 +5,10 @@
 <table>
   <thead>
     <tr>
-<<<<<<< HEAD
+
       <th>Color</th>
       <th>Id</th>
       <th>HP</th>
-=======
-      <th>Color2</th>
-      <th>Hp</th>
->>>>>>> 574638f9e58b9e194dc104fd8471a9462ee07801
       <th>Model</th>
       <th>Stock</th>
       <th>Price</th>
@@ -41,6 +37,8 @@
         <td><%= link_to 'Destroy', car, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
+
+    <%= link_to 'Click click', svcontroller_index_path, method: :post%>
   </tbody>
 </table>
 
